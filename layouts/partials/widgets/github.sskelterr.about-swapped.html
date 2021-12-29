@@ -19,7 +19,7 @@
 
 <!-- About widget -->
 <div class="row">
-  <div class="col-12 col-lg-8">
+  <div class="col-12 col-lg-4">
     <div id="profile">
 
       {{ if site.Params.avatar.gravatar }}
@@ -80,7 +80,7 @@
 
     </div>
   </div>
-  <div class="col-12 col-lg-4">
+  <div class="col-12 col-lg-8">
 
     {{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
     {{ if and $page.Params.widget $page.Title }}<h1>{{ $page.Title | markdownify | emojify }}</h1>{{ end }}
@@ -92,7 +92,7 @@
     <div class="row">
 
       {{ with $person.interests }}
-      <div class="col-md-1">
+      <div class="col-md-5">
         <div class="section-subheading">{{ i18n "interests" | markdownify }}</div>
         <ul class="ul-interests mb-0">
           {{ range . }}
@@ -103,7 +103,7 @@
       {{ end }}
 
       {{ with $person.education }}
-      <div class="col-md-3">
+      <div class="col-md-7">
         <div class="section-subheading">{{ i18n "education" | markdownify }}</div>
         <ul class="ul-edu fa-ul mb-0">
           {{ range .courses }}
